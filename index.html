@@ -5,9 +5,9 @@ avatar_size: 150
 <header>
   <figure>
     <img src="assets/images/avatar.png" width="{{page.avatar_size}}" height="{{page.avatar_size}}"/>
-    <h1>{{ site.name }}</h1>
+    <h1>{{ site.author.name }}</h1>
   </figure>
-  <p>{{ site.about }}</p>
+  <p>{{ site.author.about }}</p>
 </header>
 <main>
 {% for link in site.data.links %}
