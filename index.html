@@ -1,0 +1,18 @@
+---
+layout: default
+avatar_size: 150
+---
+<header>
+  <figure>
+    <img src="assets/images/avatar.png" width="{{page.avatar_size}}" height="{{page.avatar_size}}"/>
+    <h1>{{ site.name }}</h1>
+  </figure>
+  <p>{{ site.about }}</p>
+</header>
+<main>
+{% for link in site.data.links %}
+  <a href="{{ link.url }}">
+    {{ link.icons.default }} {{ link.name }}
+  </a>
+{% endfor %}
+</main>
