@@ -1,0 +1,85 @@
+$avatar-size: 150px;
+
+body {
+  background-color: #B7FFFA;
+  margin: 0px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin: 0px;
+}
+
+#avatar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  align-content: center;
+  gap: 8px;
+
+  width: 3*$avatar-size;
+  margin: 8px;
+  padding: 8px;
+
+  background-color: rgba($color: #00008B, $alpha: .8);
+  border-radius: 16px;
+  color: white;
+}
+
+#avatar img {
+  border-radius: 9999px;
+  height: $avatar-size;
+  height: $avatar-size;
+}
+
+#about {
+  display: none;
+}
+
+#linktree {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: $avatar-size;
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  width: 3*$avatar-size;
+}
+
+#linktree li {
+  background-color: rgba($color: #00008B, $alpha: .8);
+  list-style: none;
+  padding: 8px;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+#linktree li:hover {
+  transform: scale(1.1);
+}
+
+#linktree li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: white;
+  text-decoration: none;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+

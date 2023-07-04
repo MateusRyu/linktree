@@ -1,18 +1,21 @@
 ---
 layout: default
-avatar_size: 150
 ---
-<header>
-  <figure>
-    <img src="assets/images/avatar.png" width="{{page.avatar_size}}" height="{{page.avatar_size}}"/>
+<header id="profile-card">
+  <figure id="avatar">
+    <img src="assets/images/avatar.png"/>
     <h1>{{ site.author.name }}</h1>
   </figure>
-  <p>{{ site.author.about }}</p>
+  <p id="about">{{ site.author.about }}</p>
 </header>
 <main>
-{% for link in site.data.links %}
-  <a href="{{ link.url }}">
-    {{ link.icons.default }} {{ link.name }}
-  </a>
-{% endfor %}
+  <ul id="linktree">
+  {% for link in site.data.links %}
+    <li>
+      <a href="{{ link.url }}">
+        {{ link.icons.default }} {{ link.name | capitalize }}
+      </a>
+    </li>
+  {% endfor %}
+  </ul>
 </main>
