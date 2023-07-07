@@ -1,3 +1,6 @@
+@use 'default_colors';
+@use 'default_typography';
+
 $avatar-size: 150px;
 
 body {
@@ -22,19 +25,32 @@ h1 {
   align-content: center;
   gap: 8px;
 
-  width: 3*$avatar-size;
+  width: 90vw;
   margin: 8px;
   padding: 8px;
 
   background-color: rgba($color: #00008B, $alpha: .8);
   border-radius: 16px;
   color: white;
-}
 
-#avatar img {
-  border-radius: 9999px;
-  height: $avatar-size;
-  height: $avatar-size;
+  img {
+    border-radius: 9999px;
+    height: $avatar-size;
+    height: $avatar-size;
+  }
+
+  @media (min-width: 640px) {
+    width: 3*$avatar-size;
+  }
+
+  @media (min-width: 768px) {
+  }
+  @media (min-width: 1024px) {
+  }
+  @media (min-width: 1280px) {
+  }
+  @media (min-width: 1536px) {
+  }
 }
 
 #about {
@@ -50,28 +66,29 @@ h1 {
   padding: 0px;
   margin: 0px;
   width: 3*$avatar-size;
-}
+  
+  li {
+    background-color: rgba($color: #00008B, $alpha: .8);
+    list-style: none;
+    padding: 8px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    
+    &:hover {
+      transform: scale(1.1);
+    }
 
-#linktree li {
-  background-color: rgba($color: #00008B, $alpha: .8);
-  list-style: none;
-  padding: 8px;
-  border-radius: 8px;
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-
-#linktree li:hover {
-  transform: scale(1.1);
-}
-
-#linktree li a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  color: white;
-  text-decoration: none;
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-left: 10rem;
+      margin-right: 10rem;
+      color: white;
+      text-decoration: none;
+    }
+  }
 }
 
 footer {
